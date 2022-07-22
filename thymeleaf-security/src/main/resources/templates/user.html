@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorate="~{layout}">
+<head>
+<title>User</title>
+</head>
+<body>
+	<section layout:fragment="custom-content">
+		<p>Welcome <span sec:authentication="name"></span> !!!! This is User Page</p>
+	</section>
+</body>
+
+</html>

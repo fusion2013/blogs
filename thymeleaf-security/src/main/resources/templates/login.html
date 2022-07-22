@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout}">
+<head>
+<title>Login</title>
+</head>
+<body>
+	<section layout:fragment="custom-content">
+		<h5>Login</h5>
+		<form th:action="@{/login}" method="post">
+
+			<div class="row mb-3" th:if="${error}">
+				<div class="alert alert-danger">Invalid username and password.
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="inputEmail3" class="col-sm-2 col-form-label">User
+					Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="username">
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="inputPassword3"
+						name="password">
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Login</button>
+		</form>
+	</section>
+</body>
+
+</html>

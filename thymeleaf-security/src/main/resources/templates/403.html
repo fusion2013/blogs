@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorate="~{layout}">
+<head>
+<title>403</title>
+</head>
+<body>
+	<section layout:fragment="custom-content">		
+		
+		<div class="starter-template">
+        <h1>403 - Access is denied</h1>
+        <div th:inline="text">Hello <span sec:authentication="name"></span>, 
+                you do not have permission to access this page.</div>
+    	</div>
+		
+	</section>
+</body>
+
+</html>

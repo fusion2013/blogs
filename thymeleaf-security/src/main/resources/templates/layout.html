@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html 
+xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Fusion Blogs</title>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<div th:replace="fragments/header :: header-css"/>	
+</head>
+<body>
+	
+	<div th:replace="fragments/header :: header"/>
+	
+	<!-- Custom Content Goes here -->
+	<div class="container">
+		<section layout:fragment="custom-content">
+			<p>Your page content goes here</p>
+		</section>	
+	</div>	
+	<!-- ENDS Custom Content Goes here -->
+	
+	
+	<div th:replace="fragments/footer :: footer"/>
+	
+</body>
+</html>
